@@ -9,7 +9,7 @@ export function FibersBackdrop({ className = "" }: { className?: string }) {
       <GhostFibers
         backdrop="#000000"
         lineColor="#ffffff"
-        glowColor="#0ea5e9"
+        glowColor="#0f52ba"
         blueBoost={1}
         brightness={1.4}
         glowIntensity={1.2}
