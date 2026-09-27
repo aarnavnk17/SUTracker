@@ -17,8 +17,10 @@ export function Masthead({
   return (
     <div className="relative overflow-hidden border-b border-line bg-black py-6 sm:py-8">
       <div aria-hidden className="pointer-events-none absolute inset-0">
+        {/* The azure ramp, dark to light, so the masthead reads as the same
+            sapphire as the silk behind the dashboard rather than its own blue. */}
         <Aurora
-          colorStops={["#0047f6", "#0015ad", "#2601bb"]}
+          colorStops={["#0a387e", "#0f52ba", "#4478c9"]}
           blend={0.5}
           amplitude={1.0}
           speed={0.5}
