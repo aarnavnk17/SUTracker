@@ -39,14 +39,18 @@
 
 :root {
   color-scheme: dark;
-  --page: var(--color-ink-950);
-  --surface: var(--color-ink-900);
-  --surface-muted: var(--color-ink-800);
-  --border: rgba(255, 245, 230, 0.08);
-  --text: var(--color-ink-50);
-  --text-muted: var(--color-ink-400);
-  --card-shadow: 0 0 0 1px rgba(255, 245, 230, 0.07);
-  --card-shadow-hover: 0 0 0 1px rgba(255, 245, 230, 0.1), 0 12px 32px rgba(0, 0, 0, 0.45);
+  /* Pure black boxes on pure gold text, over the silk backdrop. Surfaces are
+     opaque so the moving pattern never sits behind a line of text. */
+  --page: #000000;
+  --surface: #000000;
+  /* one step up from the cards, so secondary controls stay visible on them */
+  --surface-muted: var(--color-ink-900);
+  --border: rgba(255, 215, 0, 0.16);
+  --text: #ffd700;
+  /* dimmed gold: secondary text has to recede without dropping out of contrast */
+  --text-muted: #d4af37;
+  --card-shadow: 0 0 0 1px rgba(255, 215, 0, 0.14);
+  --card-shadow-hover: 0 0 0 1px rgba(255, 215, 0, 0.26), 0 12px 32px rgba(0, 0, 0, 0.6);
 }
 
 @theme inline {
@@ -111,15 +115,16 @@ body {
   }
 }
 @layer components {
-  /* translucent chrome: content scrolls underneath */
+  /* translucent chrome: content scrolls underneath. Kept heavier than it was
+     before the silk backdrop -- at 72% the pattern moved behind the nav text. */
   .glass-bar {
-    background: color-mix(in srgb, var(--page) 72%, transparent);
+    background: color-mix(in srgb, var(--page) 88%, transparent);
     backdrop-filter: blur(20px) saturate(180%);
     -webkit-backdrop-filter: blur(20px) saturate(180%);
   }
   /* floating panels are thicker than the bar they drop from */
   .glass-panel {
-    background: color-mix(in srgb, var(--surface) 88%, transparent);
+    background: color-mix(in srgb, var(--surface) 96%, transparent);
     backdrop-filter: blur(30px) saturate(180%);
     -webkit-backdrop-filter: blur(30px) saturate(180%);
     box-shadow: var(--card-shadow), 0 12px 40px rgba(0, 0, 0, 0.14);

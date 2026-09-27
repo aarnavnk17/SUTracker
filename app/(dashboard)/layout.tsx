@@ -4,7 +4,7 @@ import { Masthead } from "@/components/Masthead";
 import { MastheadSubtitle } from "@/components/MastheadSubtitle";
 import { AccountMenu } from "@/components/AccountMenu";
 import { StickyHeader } from "@/components/StickyHeader";
-import { LightfallBackdrop } from "@/components/LightfallBackdrop";
+import { SilkBackdrop } from "@/components/SilkBackdrop";
 import { DashboardNav } from "@/components/DashboardNav";
 
 export default async function DashboardLayout({
@@ -27,7 +27,7 @@ export default async function DashboardLayout({
 
   return (
     <div className="relative isolate flex min-h-full flex-1 flex-col">
-      <LightfallBackdrop />
+      <SilkBackdrop />
       <Masthead
         subtitle={
           profile ? (
