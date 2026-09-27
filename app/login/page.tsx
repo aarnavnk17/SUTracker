@@ -4,7 +4,7 @@ import { useState } from "react";
 import { useRouter } from "next/navigation";
 import { createClient } from "@/lib/supabase/client";
 import { Masthead } from "@/components/Masthead";
-import { FibersBackdrop } from "@/components/FibersBackdrop";
+import { PillarBackdrop } from "@/components/PillarBackdrop";
 
 export default function LoginPage() {
   const router = useRouter();
@@ -38,7 +38,7 @@ export default function LoginPage() {
     <div className="flex min-h-full flex-1 flex-col">
       <Masthead />
       <div className="relative isolate flex flex-1 flex-col overflow-hidden">
-        <FibersBackdrop />
+        <PillarBackdrop />
         <main id="main-content" className="mx-auto flex w-full max-w-2xl flex-1 items-center px-5 py-10 sm:py-14">
           <div className="glass-panel w-full rounded-2xl p-6">
             <p className="eyebrow text-brand-600 dark:text-brand-400">Manager sign in</p>
