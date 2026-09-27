@@ -2,14 +2,14 @@
 
 import GhostFibers from "@/components/GhostFibers";
 
-// Animated gold fibers with a red glow on black, behind a page section.
+// Animated white fibers with a blue glow on black, behind a page section.
 export function FibersBackdrop({ className = "" }: { className?: string }) {
   return (
     <div aria-hidden className={`pointer-events-none absolute inset-0 -z-10 ${className}`}>
       <GhostFibers
         backdrop="#000000"
-        lineColor="#c99a5f"
-        glowColor="#8f0d0d"
+        lineColor="#ffffff"
+        glowColor="#0ea5e9"
         blueBoost={1}
         brightness={1.4}
         glowIntensity={1.2}
