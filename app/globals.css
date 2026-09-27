@@ -17,14 +17,14 @@
   --color-ink-950: #0e0c0a;
 
   /* this year's blue -- backgrounds and the masthead splash.
-     Sapphire #0f52ba is the anchor; the rest of the ramp is mixed off it. */
-  --color-azure-300: #7ba0d9;
-  --color-azure-400: #4478c9;
-  --color-azure-500: #0f52ba;
-  --color-azure-600: #0d469e;
-  --color-azure-700: #0a387e;
-  --color-azure-800: #082b61;
-  --color-azure-900: #051e43;
+     Electric blue #0038ff is the anchor; the rest of the ramp is mixed off it. */
+  --color-azure-300: #7392ff;
+  --color-azure-400: #3864ff;
+  --color-azure-500: #0038ff;
+  --color-azure-600: #0030d9;
+  --color-azure-700: #0026ad;
+  --color-azure-800: #001d85;
+  --color-azure-900: #00145c;
 
   /* antique gold -- text and accents */
   --color-brand-50: #faf3e7;

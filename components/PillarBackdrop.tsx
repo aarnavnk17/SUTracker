@@ -2,9 +2,9 @@
 
 import LightPillar from "@/components/LightPillar";
 
-// Sapphire, the same blue as --color-azure-500. Top and bottom match, so the
+// Electric blue, the same as --color-azure-500. Top and bottom match, so the
 // pillar is one colour end to end rather than a gradient.
-const PILLAR_BLUE = "#0f52ba";
+const PILLAR_BLUE = "#0038ff";
 
 // Light pillar behind a page section, on black.
 export function PillarBackdrop({ className = "" }: { className?: string }) {
