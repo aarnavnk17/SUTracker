@@ -18,28 +18,13 @@ export const metadata: Metadata = {
   description: "Meeting attendance tracker for Students Union coordinators and core team members",
 };
 
-const THEME_INIT_SCRIPT = `
-(function () {
-  try {
-    var pref = localStorage.getItem('theme') || 'system';
-    var resolved = pref === 'system'
-      ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light')
-      : pref;
-    document.documentElement.dataset.theme = resolved;
-  } catch (e) {}
-})();
-`;
-
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html
       lang="en"
-      suppressHydrationWarning
+      data-theme="dark"
       className={`${cinzel.variable} ${alexBrush.variable} h-full antialiased`}
     >
-      <head>
-        <script dangerouslySetInnerHTML={{ __html: THEME_INIT_SCRIPT }} />
-      </head>
       <body className="min-h-full flex flex-col font-sans" suppressHydrationWarning>
         <a
           href="#main-content"
