@@ -221,8 +221,11 @@ body {
   .card-urgent {
     @apply border-l-2 border-l-brand-500;
   }
+  /* Fully-marked meetings recede, but never by going translucent: opacity here
+     drops the card's own black out with it and the backdrop reads through the
+     text. Desaturation carries the signal, and the badge says it in words. */
   .card-full {
-    @apply opacity-70 grayscale-[35%];
+    @apply grayscale-[45%];
   }
 
   .btn,
