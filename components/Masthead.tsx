@@ -1,33 +1,4 @@
-// The splash PNGs are dark red smoke, but their shape lives in the alpha
-// channel -- so mask a blue fill through them rather than editing the assets.
-function SmokeSplash({
-  src,
-  position,
-  className,
-}: {
-  src: string;
-  position: string;
-  className: string;
-}) {
-  const mask = `url(${src})`;
-  return (
-    <div
-      aria-hidden
-      className={`pointer-events-none absolute opacity-90 ${className}`}
-      style={{
-        backgroundColor: "var(--color-azure-500)",
-        maskImage: mask,
-        WebkitMaskImage: mask,
-        maskSize: "900px 900px",
-        WebkitMaskSize: "900px 900px",
-        maskPosition: position,
-        WebkitMaskPosition: position,
-        maskRepeat: "no-repeat",
-        WebkitMaskRepeat: "no-repeat",
-      }}
-    />
-  );
-}
+import Aurora from "@/components/Aurora";
 
 function LogoChip({ src, alt }: { src: string; alt: string }) {
   return (
@@ -45,16 +16,14 @@ export function Masthead({
 }) {
   return (
     <div className="relative overflow-hidden border-b border-line bg-black py-6 sm:py-8">
-      <SmokeSplash
-        src="/su-smoke-tl.png"
-        position="top left"
-        className="left-0 top-0 h-40 w-56 sm:h-56 sm:w-72"
-      />
-      <SmokeSplash
-        src="/su-smoke-br.png"
-        position="bottom right"
-        className="bottom-0 right-0 h-40 w-56 sm:h-56 sm:w-72"
-      />
+      <div aria-hidden className="pointer-events-none absolute inset-0">
+        <Aurora
+          colorStops={["#0047f6", "#0015ad", "#2601bb"]}
+          blend={0.5}
+          amplitude={1.0}
+          speed={0.5}
+        />
+      </div>
 
       <div className="relative mx-auto flex max-w-5xl flex-wrap items-center justify-center gap-x-6 gap-y-4 px-5 sm:justify-between">
         <div className="flex items-center gap-3">
